@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+@import "tailwindcss";
+@config "../../../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-foxer-dark dark:text-white font-sans antialiased transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    @apply bg-foxer-orange text-white;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-white/20 rounded-full hover:bg-foxer-orange dark:hover:bg-foxer-orange transition-colors;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.3)];
+  }
+  
+  .glass-card {
+    @apply bg-white/80 dark:bg-foxer-card/80 backdrop-blur-2xl border border-white/50 dark:border-white/5 shadow-xl dark:shadow-2xl;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foxer-orange to-yellow-400;
+  }
+  
+  .text-gradient-subtle {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-500 dark:from-white dark:to-gray-400;
+  }
+
+  /* Interactions */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl dark:hover:shadow-foxer-orange/10;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(255,90,0,0.5)];
+  }
+
+  /* Blob animations */
+  .animate-blob {
+    animation: blob-move 14s ease-in-out infinite;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  .animation-delay-5000 {
+    animation-delay: 5s;
+  }
+}
+
+@keyframes blob-move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(5%, 8%) scale(1.07);
+  }
+  50% {
+    transform: translate(-4%, 12%) scale(0.95);
+  }
+  75% {
+    transform: translate(8%, -6%) scale(1.04);
+  }
+}

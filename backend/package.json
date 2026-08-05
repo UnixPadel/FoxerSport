@@ -1,0 +1,54 @@
+{
+  "name": "foxersport-backend",
+  "version": "1.0.0",
+  "description": "Foxersport API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "start:prod": "pm2 start ecosystem.config.cjs",
+    "stop:prod": "pm2 stop ecosystem.config.cjs",
+    "dev": "nodemon src/server.js",
+    "seed": "node prisma/seed.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "migrate:images": "node scripts/migrate-images.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "axios": "^1.18.1",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "country-list": "^2.4.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.0.1",
+    "google-auth-library": "^10.7.0",
+    "helmet": "^7.1.0",
+    "hpp": "^0.2.3",
+    "html-to-text": "^10.0.0",
+    "iyzipay": "^2.0.67",
+    "jsonwebtoken": "^9.0.2",
+    "meilisearch": "^0.38.0",
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.5",
+    "nodemailer": "^6.10.1",
+    "pm2": "^7.0.1",
+    "puppeteer": "^25.2.0",
+    "rate-limit-redis": "^5.0.0",
+    "redis": "^4.7.1",
+    "sharp": "^0.34.5",
+    "xlsx": "^0.18.5",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prisma": "^5.10.2"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}

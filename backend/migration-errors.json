@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-06-22T08:05:37.556Z",
+  "errors": [
+    {
+      "id": 219,
+      "url": "https://foxersport.com/image/catalog/Product/Towel/4.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "id": 218,
+      "url": "https://foxersport.com/image/catalog/Product/Towel/3.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "id": 217,
+      "url": "https://foxersport.com/image/catalog/Product/Towel/8.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "id": 38,
+      "url": "https://foxersport.com/image/catalog/Product/Racket/5018/ON.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "id": 39,
+      "url": "https://foxersport.com/image/catalog/Product/Racket/5018/DSC07995_2.jpg",
+      "error": "fetch failed"
+    }
+  ]
+}
